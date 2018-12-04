@@ -36,24 +36,24 @@ class Components extends React.Component {
     return (
       <div>
         <Header
-          brand="Material Kit React"
+          brand="Components"
           rightLinks={<HeaderLinks />}
           fixed
           color="transparent"
           changeColorOnScroll={{
             height: 400,
-            color: "white"
+            color: "rose"
           }}
           {...rest}
         />
-        <Parallax image={require("assets/img/bg4.jpg")}>
+        <Parallax image={require("assets/img/bg7.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Projet 20 ans.</h1>
                   <h3 className={classes.subtitle}>
-                    A Badass Material-UI Kit based on Material Design.
+                    20 ans du département Télécom | Avril 2019
                   </h3>
                 </div>
               </GridItem>

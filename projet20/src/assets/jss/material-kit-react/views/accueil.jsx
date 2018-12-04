@@ -1,6 +1,6 @@
-  import { container } from "assets/jss/material-kit-react.jsx";
+import { container } from "assets/jss/material-kit-react.jsx";
 
-const componentsStyle = {
+const accueilStyle = {
   container,
   brand: {
     color: "#FFFFFF",
@@ -33,7 +33,10 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  tooltipcomp: {
+    buttonText: "Compon"
   }
 };
 
-export default componentsStyle;
+export default accueilStyle;
