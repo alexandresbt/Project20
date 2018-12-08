@@ -6,6 +6,7 @@ import Accueil from "views/Accueil/Accueil.jsx";
 
 var indexRoutes = [
   { path: "/accueil", name: "Accueil", component: Accueil },
+  { path: "/sondage", name: "Sondage", component: Sondage },
   { path: "/landing-page", name: "LandingPage", component: LandingPage },
   { path: "/profile-page", name: "ProfilePage", component: ProfilePage },
   { path: "/login-page", name: "LoginPage", component: LoginPage },
