@@ -16,23 +16,25 @@ import Parallax from "components/Parallax/Parallax.jsx";
 
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
+import SectionPills from "./Sections/SectionPills.jsx";
+import SectionCarousel from "./Sections/SectionCarousel.jsx";
+import SectionLogin from "./Sections/SectionLogin.jsx";
 
 import accueilStyle from "assets/jss/material-kit-react/views/accueil.jsx";
-
 
 class Accueil extends React.Component {
   render(){
     const { classes, ...rest } = this.props;
     return(
- 
+
       <div>
         <Header
           brand="Accueil"
           fixed
           color="transparent"
           changeColorOnScroll={{
-            height: 400,
-            color: "rose"
+            height: 300,
+            color: "info"
           }}
           {...rest}
         />
@@ -52,8 +54,20 @@ class Accueil extends React.Component {
           </div>
         </Parallax>
 
-      </div>
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <SectionPills />
+          <GridContainer spacing={24}>
+            <GridItem xs={6}>
+              <SectionCarousel />
+            </GridItem>
+            <GridItem xs={6}>
+              <SectionLogin />
+            </GridItem>
+          </GridContainer>
+        </div>
 
+
+      </div>
     );
   } 
 }
