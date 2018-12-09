@@ -3,6 +3,7 @@ import LandingPage from "views/LandingPage/LandingPage.jsx";
 import ProfilePage from "views/ProfilePage/ProfilePage.jsx";
 import LoginPage from "views/LoginPage/LoginPage.jsx";
 import Accueil from "views/Accueil/Accueil.jsx";
+import Sondage from "views/Sondage/Sondage.jsx";
 
 var indexRoutes = [
   { path: "/accueil", name: "Accueil", component: Accueil },
