@@ -29,7 +29,7 @@ class SectionCarousel extends React.Component {
       <div className={classes.section}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
+            <GridItem xs={12} sm={12} md={10} className={classes.marginAuto}>
               <Card carousel>
                 <Carousel {...settings}>
                   <div>
@@ -38,12 +38,12 @@ class SectionCarousel extends React.Component {
                       alt="First slide"
                       className="slick-image"
                     />
-                    <div className="slick-caption">
+                    {/*<div className="slick-caption">
                       <h4>
                         <LocationOn className="slick-icons" />Yellowstone
                         National Park, United States
                       </h4>
-                    </div>
+                    </div>*/}
                   </div>
                   <div>
                     <img
@@ -51,12 +51,12 @@ class SectionCarousel extends React.Component {
                       alt="Second slide"
                       className="slick-image"
                     />
-                    <div className="slick-caption">
+                    {/*<div className="slick-caption">
                       <h4>
                         <LocationOn className="slick-icons" />Somewhere Beyond,
                         United States
                       </h4>
-                    </div>
+                    </div>*/}
                   </div>
                   <div>
                     <img
@@ -64,12 +64,12 @@ class SectionCarousel extends React.Component {
                       alt="Third slide"
                       className="slick-image"
                     />
-                    <div className="slick-caption">
+                    {/*<div className="slick-caption">
                       <h4>
                         <LocationOn className="slick-icons" />Yellowstone
                         National Park, United States
                       </h4>
-                    </div>
+                    </div>*/}
                   </div>
                 </Carousel>
               </Card>

@@ -13,10 +13,10 @@ class Sondage extends React.Component {
 
     return (
       <GridContainer justify="center">
-        <GridItem xs={12} sm={6}>
+        <GridItem xs={12} sm={6} md={6}>
           <SectionCarousel />
         </GridItem>
-        <GridItem xs={12} sm={6}>
+        <GridItem xs={12} sm={6} md={6}>
           <SectionForm />
         </GridItem>
       </GridContainer>

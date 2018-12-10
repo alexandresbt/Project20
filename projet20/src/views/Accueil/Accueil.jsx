@@ -19,7 +19,7 @@ import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import SectionPills from "./Sections/SectionPills.jsx";
 import SectionCarousel from "./Sections/SectionCarousel.jsx";
 import SectionLogin from "./Sections/SectionLogin.jsx";
-
+import Sondage from "views/Sondage/Sondage.jsx";
 import accueilStyle from "assets/jss/material-kit-react/views/accueil.jsx";
 
 class Accueil extends React.Component {
@@ -56,14 +56,15 @@ class Accueil extends React.Component {
 
         <div className={classNames(classes.main, classes.mainRaised)}>
           <SectionPills />
-          <GridContainer spacing={24}>
+          {/* <GridContainer spacing={24}>
             <GridItem xs={6}>
               <SectionCarousel />
             </GridItem>
             <GridItem xs={6}>
               <SectionLogin />
             </GridItem>
-          </GridContainer>
+          </GridContainer> */}
+          <Sondage />
         </div>
 
 
