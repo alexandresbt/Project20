@@ -9,17 +9,19 @@ import SectionForm from "views/Components/Sections/SectionForm.jsx";
 
 class Sondage extends React.Component {
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes } = this.props;
 
     return (
-      <GridContainer justify="center">
-        <GridItem xs={12} sm={6} md={6}>
-          <SectionCarousel />
-        </GridItem>
-        <GridItem xs={12} sm={6} md={6}>
-          <SectionForm />
-        </GridItem>
-      </GridContainer>
+      <div className={classes.sondage}>
+        <GridContainer justify="center">
+          <GridItem xs={12} sm={6} md={6}>
+            <SectionCarousel />
+          </GridItem>
+          <GridItem xs={12} sm={6} md={6}>
+            <SectionForm />
+          </GridItem>
+        </GridContainer>
+      </div>
     );
   }
 }
