@@ -8,9 +8,9 @@ import CustomInput from "components/CustomInput/CustomInput.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 const initialState = {
-  value1: '',
-  value2: '',
-  value3: ''
+  Nom: '',
+  Prenom: '',
+  Email: ''
 };
 
 class SectionForm extends React.Component {
@@ -27,21 +27,20 @@ class SectionForm extends React.Component {
   handleChange(event) {
     var name = event.target.name;
     var value = event.target.value;
-    //console.log("salut !," + name + value);
     
     if (name === "1") {
-      this.setState({value1: value});
+      this.setState({Nom: value});
     }else if (name === "2"){
-      this.setState({value2: value});
+      this.setState({Prenom: value});
     } else {
-      this.setState({value3: value});
+      this.setState({Email: value});
     }
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value1 + this.state.value2 + ' and an email :' + this.state.value3);
+    //alert('A name was submitted: ' + this.state.value1 + " " + this.state.value2 + ' and an email :' + this.state.value3);
     event.preventDefault();
-
+      
     this.reset();
   }
 
@@ -68,7 +67,7 @@ class SectionForm extends React.Component {
                   }}
                   inputProps={{
                     name: "1",
-                    value: (this.state.value1),
+                    value: (this.state.Nom),
                     onChange: (this.handleChange)
                   }}
                 />
@@ -87,7 +86,7 @@ class SectionForm extends React.Component {
                   }}
                   inputProps={{
                     name: "2",
-                    value: (this.state.value2),
+                    value: (this.state.Prenom),
                     onChange: (this.handleChange)
                   }}
                 />
@@ -105,7 +104,7 @@ class SectionForm extends React.Component {
                   }}
                   inputProps={{
                     name: "3",
-                    value: (this.state.value3),
+                    value: (this.state.Email),
                     onChange: (this.handleChange)
                   }}
                 />
