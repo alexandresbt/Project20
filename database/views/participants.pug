@@ -1,0 +1,17 @@
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1 Nombre d'inscrits : #{number[0].id}
+
+    h1 Emsemble des Inscrits :
+    each participant in participants
+      .row
+        .tableblock
+          h4 #{participant.nom}
+        .tableblock
+          h4 #{participant.prenom}
+        .tableblock
+          h4 #{participant.email}
+
+

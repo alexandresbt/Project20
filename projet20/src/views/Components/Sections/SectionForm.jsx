@@ -8,9 +8,9 @@ import CustomInput from "components/CustomInput/CustomInput.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 const initialState = {
-  Nom: '',
-  Prenom: '',
-  Email: ''
+  nom: '',
+  prenom: '',
+  email: ''
 };
 
 class SectionForm extends React.Component {
@@ -28,19 +28,40 @@ class SectionForm extends React.Component {
     var name = event.target.name;
     var value = event.target.value;
     
-    if (name === "1") {
-      this.setState({Nom: value});
-    }else if (name === "2"){
-      this.setState({Prenom: value});
+    if (name === "nom") {
+      this.setState({nom: value});
+    }else if (name === "prenom"){
+      this.setState({prenom: value});
     } else {
-      this.setState({Email: value});
+      this.setState({email: value});
     }
   }
 
   handleSubmit(event) {
     //alert('A name was submitted: ' + this.state.value1 + " " + this.state.value2 + ' and an email :' + this.state.value3);
     event.preventDefault();
-      
+    //console.log(event.target);
+    
+    const data = new FormData();
+    data.append('nom', this.state.nom);
+    data.append('prenom', this.state.prenom);
+    data.append('email', this.state.email);
+    for (var pair of data.entries()) {
+      console.log(pair[0]+ ', ' + pair[1]); 
+    }
+    
+    fetch('http://localhost:6556/addparticipant', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        nom: this.state.nom,
+        prenom: this.state.prenom,
+        email: this.state.email
+      })
+})
     this.reset();
   }
 
@@ -66,9 +87,10 @@ class SectionForm extends React.Component {
                     fullWidth: true
                   }}
                   inputProps={{
-                    name: "1",
-                    value: (this.state.Nom),
-                    onChange: (this.handleChange)
+                    name: "nom",
+                    value: (this.state.nom),
+                    onChange: (this.handleChange),
+                    type: "text"
                   }}
                 />
               </GridItem>
@@ -85,9 +107,10 @@ class SectionForm extends React.Component {
                     fullWidth: true
                   }}
                   inputProps={{
-                    name: "2",
-                    value: (this.state.Prenom),
-                    onChange: (this.handleChange)
+                    name: "prenom",
+                    value: (this.state.prenom),
+                    onChange: (this.handleChange),
+                    type: "text"
                   }}
                 />
               </GridItem>
@@ -103,9 +126,10 @@ class SectionForm extends React.Component {
                     fullWidth: true
                   }}
                   inputProps={{
-                    name: "3",
-                    value: (this.state.Email),
-                    onChange: (this.handleChange)
+                    name: "email",
+                    value: (this.state.email),
+                    onChange: (this.handleChange),
+                    type: "email"
                   }}
                 />
               </GridItem>

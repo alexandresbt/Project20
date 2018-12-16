@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.row {
+  display: flex;
+}
+.tableblock{
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
