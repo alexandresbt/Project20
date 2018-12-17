@@ -5,14 +5,15 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
-import Visibility from "@material-ui/icons/Visibility";
+import Cafe from "@material-ui/icons/LocalCafe";
+import Diner from "@material-ui/icons/LocalDining";
+import Cocktail from "@material-ui/icons/LocalBar";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import NavPills from "components/NavPills/NavPills.jsx";
+
 import pillsStyle from "assets/jss/material-kit-react/views/accueilSections/pillsStyle.jsx";
 
 class SectionPills extends React.Component {
@@ -25,120 +26,64 @@ class SectionPills extends React.Component {
             <div className={classes.title}>
               <h3>Activités</h3>
             </div>
-            <div className={classes.title}>
-              <h3>
-                <small>Petite description</small>
-              </h3>
-            </div>
             <GridContainer>
               
                 <NavPills
-                  color="primary"
+                  color="danger"
                   tabs={[
                     {
-                      tabButton: "Activité 1",
-                      tabIcon: Visibility,
+                      tabButton: "Matin",
+                      tabIcon: Cafe,
                       tabContent: (
                         <span>
-                          <p>
-                            Collaboratively administrate empowered markets via
-                            plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.
-                          </p>
-                          <br />
-                          <p>
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI. Collaboratively
-                            administrate empowered markets via plug-and-play
-                            networks. Dynamically procrastinate B2C users after
-                            installed base benefits.
-                          </p>
-                          <br />
-                          <p>
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI. Collaboratively
-                            administrate empowered markets via plug-and-play
-                            networks. Dynamically procrastinate B2C users after
-                            installed base benefits.
-                          </p>
+                          <ul>
+                            <li>9h30-10h30 / Agora : Accueil, petit déjeuner</li>
+                            <li>10h30-12h / La rotonde :
+                              <ul>
+                                <li>10h30 - 10h45 : Que devient l’INSA ?</li>
+                                <li>10h45 - 11h00 : Que devient le département ?</li>
+                                <li>11h - 12h : Que deviennent les anciens élèves de TC ?</li>
+                              </ul>
+                            </li>
+                          </ul> 
                         </span>
                       )
                     },
                     {
-                      tabButton: "Activité 2",
-                      tabIcon: Schedule,
+                      tabButton: "Midi",
+                      tabIcon: Diner,
                       tabContent: (
                         <span>
-                          <p>
-                            Efficiently unleash cross-media information without
-                            cross-media value. Quickly maximize timely
-                            deliverables for real-time schemas.
-                          </p>
-                          <br />
-                          <p>
-                            Dramatically maintain clicks-and-mortar solutions
-                            without functional solutions. Dramatically visualize
-                            customer directed convergence without revolutionary
-                            ROI. Collaboratively administrate empowered markets
-                            via plug-and-play networks. Dynamically
-                            procrastinate B2C users after installed base
-                            benefits.
-                          </p>
+                          <ul>
+                            <li>
+                          12h-14h / Agora : Repas cocktail et découverte des projets de la fresque du département réalisé par l’école de design la Martinière Diderot. 
+                          Elle représente cet évènement et sera réalisée dans le hall du bâtiment. 
+                          Au cours de ce repas vous pourrez voter pour votre fresque préférée.
+                            </li>
+                          </ul>
                         </span>
                       )
                     },
                     {
-                      tabButton: "Activité 3",
-                      tabIcon: List,
+                      tabButton: "Soir",
+                      tabIcon: Cocktail,
                       tabContent: (
                         <span>
-                          <p>
-                            Collaboratively administrate empowered markets via
-                            plug-and-play networks. Dynamically procrastinate
-                            B2C users after installed base benefits.
-                          </p>
-                          <br />
-                          <p>
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI. Collaboratively
-                            administrate empowered markets via plug-and-play
-                            networks. Dynamically procrastinate B2C users after
-                            installed base benefits.
-                          </p>
-                          <br />
-                          <p>
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI. Collaboratively
-                            administrate empowered markets via plug-and-play
-                            networks. Dynamically procrastinate B2C users after
-                            installed base benefits.
-                          </p>
+                          <ul>
+                            <li>14h-16h / département TC - amphi Chappe - campus INSA :
+                              <ul>
+                                <li>Département TC : Présentation des salles techniques par les professeurs. </li>
+                                <li>Amphi Chappe : Quizz de remise à niveau TC, Êtes vous meilleurs que les étudiants ? </li>
+                                <li>Campus : Découverte des nouveautés.</li>
+                              </ul>
+                            </li>
+                            <li>16h-17h / Rotonde : Mauvais au Quizz ? Les chercheurs vous mettent à jour.</li>
+                            <li>17h-18h / Kfet : Quoi de mieux qu’une bonne bière pour attaquer la soirée ?</li>
+                          </ul> 
                         </span>
                       )
-                    },
-                    {
-                        tabButton: "Et encore d'autre...",
-                        tabIcon: Dashboard,
-                        tabContent: (
-                          <span>
-                            <p>
-                              Efficiently unleash cross-media information without
-                              cross-media value. Quickly maximize timely
-                              deliverables for real-time schemas.
-                            </p>
-                            <br />
-                            <p>
-                              Dramatically maintain clicks-and-mortar solutions
-                              without functional solutions. Dramatically visualize
-                              customer directed convergence without revolutionary
-                              ROI. Collaboratively administrate empowered markets
-                              via plug-and-play networks. Dynamically
-                              procrastinate B2C users after installed base
-                              benefits.
-                            </p>
-                          </span>
-                        )
-                      }
+                    }
+                    
                   ]}
                 />
             

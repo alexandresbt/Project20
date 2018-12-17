@@ -137,7 +137,7 @@ class SectionForm extends React.Component {
           </div>
           <div className={classes.button}>
             <GridContainer>
-              <Button type="submit" color="info">Je m'inscris</Button>
+              <Button type="submit" color="danger">Je m'inscris</Button>
             </GridContainer>
           </div>
         </form>

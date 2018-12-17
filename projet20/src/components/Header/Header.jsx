@@ -73,7 +73,7 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent = <Button className={classes.title} onClick={() => { document.getElementById('section').scrollIntoView(); }}>{brand}</Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
@@ -87,6 +87,7 @@ class Header extends React.Component {
               brandComponent
             )}
           </div>
+         
           <Hidden smDown implementation="css">
             {rightLinks}
           </Hidden>
@@ -96,10 +97,12 @@ class Header extends React.Component {
               aria-label="open drawer"
               onClick={this.handleDrawerToggle}
             >
+            
               <Menu />
             </IconButton>
           </Hidden>
         </Toolbar>
+        
         <Hidden mdUp implementation="css">
           <Drawer
             variant="temporary"

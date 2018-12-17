@@ -22,6 +22,11 @@ import SectionLogin from "./Sections/SectionLogin.jsx";
 import Sondage from "views/Sondage/Sondage.jsx";
 import accueilStyle from "assets/jss/material-kit-react/views/accueil.jsx";
 
+import Player from "./Sections/Video.jsx";
+
+
+
+
 class Accueil extends React.Component {
   render(){
     const { classes, ...rest } = this.props;
@@ -31,16 +36,17 @@ class Accueil extends React.Component {
         <Header
           brand="Accueil"
           fixed
+          rightLinks={<HeaderLinks />}
           color="transparent"
           changeColorOnScroll={{
             height: 300,
-            color: "info"
+            color: "danger"
           }}
           {...rest}
         />
-
-        <Parallax image={require("assets/img/bg7.jpg")}>
+        <Parallax image={require("assets/img/img1.png")}>
           <div className={classes.container}>
+
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
@@ -54,7 +60,7 @@ class Accueil extends React.Component {
           </div>
         </Parallax>
 
-        <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classNames(classes.main, classes.mainRaised)} id="section">
           <SectionPills />
           {/* <GridContainer spacing={24}>
             <GridItem xs={6}>
@@ -74,3 +80,4 @@ class Accueil extends React.Component {
 }
 
 export default withStyles(accueilStyle)(Accueil);
+
