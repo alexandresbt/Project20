@@ -11,6 +11,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import GridContainer from "components/Grid/GridContainer.jsx";
+import GridItem from "components/Grid/GridItem.jsx";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
@@ -74,29 +76,47 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     const brandComponent1 = <Button className={classes.title} onClick={() => { document.getElementById('accueil').scrollIntoView(); }}>Accueil</Button>;
-    const brandComponent2 = <Button className={classes.title} onClick={() => { document.getElementById('section').scrollIntoView(); }}>Activité</Button>;
+    const brandComponent2 = <Button className={classes.title} onClick={() => { document.getElementById('prog').scrollIntoView(); }}>Programme</Button>;
+    const brandComponent3 = <Button className={classes.title} onClick={() => { document.getElementById('sondage').scrollIntoView(); }}>Sondage</Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
           {leftLinks !== undefined ? brandComponent1 : null}
-          <div className={classes.flex}>
-            {leftLinks !== undefined ? (
-              <Hidden smDown implementation="css">
-                {leftLinks}
-              </Hidden>
-            ) : (
-              brandComponent1
-            )}
-          </div>
-          <div className={classes.flex}>
-            {leftLinks !== undefined ? (
-              <Hidden smDown implementation="css">
-                {leftLinks}
-              </Hidden>
-            ) : (
-              brandComponent2
-            )}
-          </div>
+          <GridContainer>
+            <GridItem xs={3}>
+              <div className={classes.flex}>
+                {leftLinks !== undefined ? (
+                  <Hidden smDown implementation="css">
+                    {leftLinks}
+                  </Hidden>
+                ) : (
+                  brandComponent1
+                )}
+              </div>
+            </GridItem>  
+            <GridItem xs={4}>
+              <div className={classes.flex}>
+                {leftLinks !== undefined ? (
+                  <Hidden smDown implementation="css">
+                    {leftLinks}
+                  </Hidden>
+                ) : (
+                  brandComponent2
+                )}
+              </div>
+            </GridItem>
+            <GridItem xs={4}>
+              <div className={classes.flex}>
+                {leftLinks !== undefined ? (
+                  <Hidden smDown implementation="css">
+                    {leftLinks}
+                  </Hidden>
+                ) : (
+                  brandComponent3
+                )}
+              </div>
+            </GridItem>
+          </GridContainer>
           <Hidden smDown implementation="css">
             {rightLinks}
           </Hidden>

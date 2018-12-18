@@ -36,18 +36,25 @@ class SectionPills extends React.Component {
                       tabButton: "Matin",
                       tabIcon: Cafe,
                       tabContent: (
-                        <span>
-                          <ul>
-                            <li>9h30-10h30 / Agora : Accueil, petit déjeuner</li>
-                            <li>10h30-12h / La rotonde :
+                        <GridContainer> 
+                          <GridItem xs={6}>
+                            <span>
                               <ul>
-                                <li>10h30 - 10h45 : Que devient l’INSA ?</li>
-                                <li>10h45 - 11h00 : Que devient le département ?</li>
-                                <li>11h - 12h : Que deviennent les anciens élèves de TC ?</li>
-                              </ul>
-                            </li>
-                          </ul> 
-                        </span>
+                                <li>9h30-10h30 / Agora : Accueil, petit déjeuner</li>
+                                <li>10h30-12h / La rotonde :
+                                  <ul>
+                                    <li>10h30 - 10h45 : Que devient l’INSA ?</li>
+                                    <li>10h45 - 11h00 : Que devient le département ?</li>
+                                    <li>11h - 12h : Que deviennent les anciens élèves de TC ?</li>
+                                  </ul>
+                                </li>
+                              </ul> 
+                            </span>
+                          </GridItem>
+                          <GridItem xs={6}> 
+                            <p>Hello</p>
+                          </GridItem>
+                        </GridContainer>
                       )
                     },
                     {

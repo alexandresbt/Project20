@@ -60,9 +60,10 @@ class Accueil extends React.Component {
           </div>
         </Parallax>
 
-        <div className={classNames(classes.main, classes.mainRaised)} id="section">
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <div id="prog">
           <SectionPills />
-        
+          </div>
           {/* <GridContainer spacing={24}>
             <GridItem xs={6}>
               <SectionCarousel />
@@ -71,8 +72,9 @@ class Accueil extends React.Component {
               <SectionLogin />
             </GridItem>
           </GridContainer> */}
-        
+          <div id="sondage">
           <Sondage />
+          </div>
         </div>
 
 
