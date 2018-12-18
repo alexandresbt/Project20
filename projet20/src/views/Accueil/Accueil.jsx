@@ -32,7 +32,7 @@ class Accueil extends React.Component {
     const { classes, ...rest } = this.props;
     return(
 
-      <div>
+      <div id="accueil">
         <Header
           brand="Accueil"
           fixed
@@ -62,6 +62,7 @@ class Accueil extends React.Component {
 
         <div className={classNames(classes.main, classes.mainRaised)} id="section">
           <SectionPills />
+        
           {/* <GridContainer spacing={24}>
             <GridItem xs={6}>
               <SectionCarousel />
@@ -70,6 +71,7 @@ class Accueil extends React.Component {
               <SectionLogin />
             </GridItem>
           </GridContainer> */}
+        
           <Sondage />
         </div>
 

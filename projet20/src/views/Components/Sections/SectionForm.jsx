@@ -71,10 +71,10 @@ class SectionForm extends React.Component {
     return (
       <div>
         <div className={classes.title}>
-          <h2>Rejoignez l'évènement !</h2>
+          <h2>Sondage de participation</h2>
         </div>
         <div className={classes.subtitles}>
-          <h4>Une petite explication</h4>
+          <h4>Ce sondage n'est pas une inscription définitive</h4>
         </div>
         <form onSubmit={this.handleSubmit}>
           <div className={classes.input}>

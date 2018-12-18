@@ -8,6 +8,7 @@ import Dashboard from "@material-ui/icons/Dashboard";
 import Cafe from "@material-ui/icons/LocalCafe";
 import Diner from "@material-ui/icons/LocalDining";
 import Cocktail from "@material-ui/icons/LocalBar";
+import Walk from "@material-ui/icons/DirectionsWalk"
 
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -24,7 +25,7 @@ class SectionPills extends React.Component {
         <div className={classes.container}>
           <div id="navigation-pills">
             <div className={classes.title}>
-              <h3>Activités</h3>
+              <h2>Programme de la journée</h2>
             </div>
             <GridContainer>
               
@@ -65,8 +66,8 @@ class SectionPills extends React.Component {
                       )
                     },
                     {
-                      tabButton: "Soir",
-                      tabIcon: Cocktail,
+                      tabButton: "Après-midi",
+                      tabIcon: Walk,
                       tabContent: (
                         <span>
                           <ul>
@@ -79,6 +80,20 @@ class SectionPills extends React.Component {
                             </li>
                             <li>16h-17h / Rotonde : Mauvais au Quizz ? Les chercheurs vous mettent à jour.</li>
                             <li>17h-18h / Kfet : Quoi de mieux qu’une bonne bière pour attaquer la soirée ?</li>
+                          </ul> 
+                        </span>
+                      )
+                    },
+                    {
+                      tabButton: "Soir",
+                      tabIcon: Cocktail,
+                      tabContent: (
+                        <span>
+                          <ul>
+                            <li>21h-00h / Lyon : Pour clore la journée nous vous invitons à passer une soirée dans Lyon. 
+                              Vous êtes convié à un repas avec les anciens élèves puis une soirée dansante. 
+                              La soirée sera payante pour les participants.</li>
+                            
                           </ul> 
                         </span>
                       )

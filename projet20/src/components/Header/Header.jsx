@@ -73,21 +73,30 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title} onClick={() => { document.getElementById('section').scrollIntoView(); }}>{brand}</Button>;
+    const brandComponent1 = <Button className={classes.title} onClick={() => { document.getElementById('accueil').scrollIntoView(); }}>Accueil</Button>;
+    const brandComponent2 = <Button className={classes.title} onClick={() => { document.getElementById('section').scrollIntoView(); }}>Activité</Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
-          {leftLinks !== undefined ? brandComponent : null}
+          {leftLinks !== undefined ? brandComponent1 : null}
           <div className={classes.flex}>
             {leftLinks !== undefined ? (
               <Hidden smDown implementation="css">
                 {leftLinks}
               </Hidden>
             ) : (
-              brandComponent
+              brandComponent1
             )}
           </div>
-         
+          <div className={classes.flex}>
+            {leftLinks !== undefined ? (
+              <Hidden smDown implementation="css">
+                {leftLinks}
+              </Hidden>
+            ) : (
+              brandComponent2
+            )}
+          </div>
           <Hidden smDown implementation="css">
             {rightLinks}
           </Hidden>
