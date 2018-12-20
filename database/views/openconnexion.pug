@@ -7,13 +7,17 @@ block content
       div(class='alert alert-danger' role='alert') #{errorMessage}
 
     form(action='/login' method='post')
-      div(class='form-group row')
-        label(for='username' class='col-lg-4 col-form-label') Username
-        div(class='col-lg-8')
-          input(type='username' class='form-control' name='username' placeholder='Username')
+      .margin
+        div(class='form-group row')
+          label(for='username' class='col-lg-4 col-form-label') Username
+          div(class='col-lg-8')
+            input(type='username' class='form-control' name='username' placeholder='Username')
 
-      div(class='form-group row')
-        label(for='password' class='col-lg-4 col-form-label') Mot de passe
-        div(class='col-lg-8')
-          input(type='password' class='form-control' name='password' placeholder='Mot de passe')
-      button(type='submit' class='form-control btn') Valider
+        div(class='form-group row padding')
+          label(for='password' class='col-lg-4 col-form-label') Mot de passe
+          div(class='col-lg-8')
+            input(type='password' class='form-control' name='password' placeholder='Mot de passe')
+      button(type='submit' class='form-control btn btn-primary margin') Valider
+
+
+

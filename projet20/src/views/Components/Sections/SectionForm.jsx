@@ -38,7 +38,6 @@ class SectionForm extends React.Component {
   }
 
   handleSubmit(event) {
-    //alert('A name was submitted: ' + this.state.value1 + " " + this.state.value2 + ' and an email :' + this.state.value3);
     event.preventDefault();
     //console.log(event.target);
     
@@ -46,9 +45,9 @@ class SectionForm extends React.Component {
     data.append('nom', this.state.nom);
     data.append('prenom', this.state.prenom);
     data.append('email', this.state.email);
-    for (var pair of data.entries()) {
+    /*for (var pair of data.entries()) {
       console.log(pair[0]+ ', ' + pair[1]); 
-    }
+    }*/
     
     fetch('http://localhost:6556/addparticipant', {
       method: 'POST',

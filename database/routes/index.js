@@ -60,9 +60,10 @@ router.post('/login', async function(req, res, next) {
 
 router.post('/addparticipant', async function(req, res, _next) {
   try {
-    console.log(req.body);
-    await ParticipantModel.addParticipant(req.body.nom, req.body.prenom, req.body.email);
-    res.status(200).send();
+    if (req.body.nom != "" && req.body.prenom != "" && req.body.email != "") {
+      await ParticipantModel.addParticipant(req.body.nom, req.body.prenom, req.body.email);
+      res.status(200).send();
+    }
   } catch (ex) {
     res.render('error', {
       message: "Erreur dans la modification des données",

@@ -9,9 +9,23 @@ a {
 
 .row {
   display: flex;
+  flex-direction: row;
 }
 .tableblock{
   border: 1px solid black;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 30%;
+  padding: 20px;
+}
+
+.margin {
+  margin-top: 40px;
+}
+
+.padding {
+  padding-top : 20px;
+}
+
+.espace {
+  margin-left : 20%;
+  height : 40px;
 }

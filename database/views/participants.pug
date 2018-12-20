@@ -1,17 +1,20 @@
-html
-  head
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    h1 Nombre d'inscrits : #{number[0].id}
+extend layout
 
+
+block content
+  h1 Nombre d'inscrits : #{number[0].id}
+  .row
     h1 Emsemble des Inscrits :
-    each participant in participants
-      .row
-        .tableblock
-          h4 #{participant.nom}
-        .tableblock
-          h4 #{participant.prenom}
-        .tableblock
-          h4 #{participant.email}
+    button(type="button" id="btnxml" class="btn btn-primary espace") Télécharger en format Exel ( .xml)
+  each participant in participants
+    .row 
+      .tableblock
+        h7.test #{participant.nom}
+      .tableblock
+        h7.test #{participant.prenom}
+      .tableblock
+        h7.test #{participant.email}
 
 
+block scripts
+  script(src='/js/xml.js')
