@@ -36,25 +36,19 @@ class SectionPills extends React.Component {
                       tabButton: "Matin",
                       tabIcon: Cafe,
                       tabContent: (
-                        <GridContainer> 
-                          <GridItem xs={6}>
                             <span>
                               <ul>
                                 <li>9h30-10h30 / Agora : Accueil, petit déjeuner</li>
                                 <li>10h30-12h / La rotonde :
                                   <ul>
                                     <li>10h30 - 10h45 : Que devient l’INSA ?</li>
-                                    <li>10h45 - 11h00 : Que devient le département ?</li>
-                                    <li>11h - 12h : Que deviennent les anciens élèves de TC ?</li>
+                                    <li>10h45 - 11h45 : Témoignages anciens élèves de TC </li>
+                                    <li>11h45 - 12h : Que devient le département ?</li>
                                   </ul>
                                 </li>
                               </ul> 
                             </span>
-                          </GridItem>
-                          <GridItem xs={6}> 
-                            <p>Hello</p>
-                          </GridItem>
-                        </GridContainer>
+                          
                       )
                     },
                     {
@@ -64,9 +58,14 @@ class SectionPills extends React.Component {
                         <span>
                           <ul>
                             <li>
-                          12h-14h / Agora : Repas cocktail et découverte des projets de la fresque du département réalisé par l’école de design la Martinière Diderot. 
-                          Elle représente cet évènement et sera réalisée dans le hall du bâtiment. 
-                          Au cours de ce repas vous pourrez voter pour votre fresque préférée.
+                          12h-14h / Agora : Repas cocktail
+                            </li>
+                            <li>
+                            Découverte des projets de fresque destinée à la décoration du Hall du batiment Claude Chappe. 
+                            Ces projet sont réalisés par l’école de design la Martinière Diderot
+                            </li>
+                            <li>
+                            Au cours de ce repas vous pourrez voter pour votre fresque préférée
                             </li>
                           </ul>
                         </span>
@@ -82,10 +81,10 @@ class SectionPills extends React.Component {
                               <ul>
                                 <li>Département TC : Présentation des salles techniques par les professeurs. </li>
                                 <li>Amphi Chappe : Quizz de remise à niveau TC, Êtes vous meilleurs que les étudiants ? </li>
-                                <li>Campus : Découverte des nouveautés.</li>
+                                <li>Visite du campus : Découverte des nouveautés.</li>
                               </ul>
                             </li>
-                            <li>16h-17h / Rotonde : Mauvais au Quizz ? Les chercheurs vous mettent à jour.</li>
+                            <li>16h-17h / Rotonde : Mini talks. Mauvais au Quizz? les chercheurs de TC vous mettent à jour</li>
                             <li>17h-18h / Kfet : Quoi de mieux qu’une bonne bière pour attaquer la soirée ?</li>
                           </ul> 
                         </span>
