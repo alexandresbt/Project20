@@ -25,7 +25,7 @@ class SectionPills extends React.Component {
         <div className={classes.container}>
           <div id="navigation-pills">
             <div className={classes.title}>
-              <h2>Programme de la journée</h2>
+              <h2>Programme du Vendredi 5 Avril 2019</h2>
             </div>
             <GridContainer>
               
@@ -38,12 +38,12 @@ class SectionPills extends React.Component {
                       tabContent: (
                             <span>
                               <ul>
-                                <li>9h30-10h30 / Agora : Accueil, petit déjeuner</li>
-                                <li>10h30-12h / La rotonde :
+                                <li><b>9h30-10h30 / Agora :</b> Accueil, petit déjeuner</li>
+                                <li><b>10h30-12h / La rotonde :</b>
                                   <ul>
-                                    <li>10h30 - 10h45 : Que devient l’INSA ?</li>
-                                    <li>10h45 - 11h45 : Témoignages anciens élèves de TC </li>
-                                    <li>11h45 - 12h : Que devient le département ?</li>
+                                    <li><b>10h30 - 10h45 :</b> Que devient l’INSA ?</li>
+                                    <li><b>10h45 - 11h45 :</b> Témoignages anciens élèves de TC </li>
+                                    <li><b>11h45 - 12h :</b> Que devient le département ?</li>
                                   </ul>
                                 </li>
                               </ul> 
@@ -58,8 +58,9 @@ class SectionPills extends React.Component {
                         <span>
                           <ul>
                             <li>
-                          12h-14h / Agora : Repas cocktail
+                          <b>12h-14h / Agora :</b> Repas cocktail
                             </li>
+                            <ul>
                             <li>
                             Découverte des projets de fresque destinée à la décoration du Hall du batiment Claude Chappe. 
                             Ces projet sont réalisés par l’école de design la Martinière Diderot
@@ -67,6 +68,7 @@ class SectionPills extends React.Component {
                             <li>
                             Au cours de ce repas vous pourrez voter pour votre fresque préférée
                             </li>
+                            </ul>
                           </ul>
                         </span>
                       )
@@ -77,15 +79,15 @@ class SectionPills extends React.Component {
                       tabContent: (
                         <span>
                           <ul>
-                            <li>14h-16h / département TC - amphi Chappe - campus INSA :
+                            <li><b>14h-16h / département TC - amphi Chappe - campus INSA :</b>
                               <ul>
-                                <li>Département TC : Présentation des salles techniques par les professeurs. </li>
-                                <li>Amphi Chappe : Quizz de remise à niveau TC, Êtes vous meilleurs que les étudiants ? </li>
-                                <li>Visite du campus : Découverte des nouveautés.</li>
+                                <li><b>Département TC :</b> Présentation des salles techniques par les professeurs. </li>
+                                <li><b>Amphi Chappe :</b> Quizz de remise à niveau TC, Êtes vous meilleurs que les étudiants ? </li>
+                                <li><b>Visite du campus :</b> Découverte des nouveautés.</li>
                               </ul>
                             </li>
-                            <li>16h-17h / Rotonde : Mini talks. Mauvais au Quizz? les chercheurs de TC vous mettent à jour</li>
-                            <li>17h-18h / Kfet : Quoi de mieux qu’une bonne bière pour attaquer la soirée ?</li>
+                            <li><b>16h-17h / Rotonde :</b> Mini talks. Mauvais au Quizz? les chercheurs de TC vous mettent à jour</li>
+                            <li><b>17h-18h / Kfet :</b> Quoi de mieux qu’une bonne bière pour attaquer la soirée ?</li>
                           </ul> 
                         </span>
                       )
@@ -96,7 +98,7 @@ class SectionPills extends React.Component {
                       tabContent: (
                         <span>
                           <ul>
-                            <li>21h-00h / Lyon : Pour clore la journée nous vous invitons à passer une soirée dans Lyon. 
+                            <li><b>21h-00h / Lyon :</b> Pour clore la journée nous vous invitons à passer une soirée dans Lyon. 
                               Vous êtes convié à un repas avec les anciens élèves puis une soirée dansante. 
                               La soirée sera payante pour les participants.</li>
                             

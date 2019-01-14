@@ -10,9 +10,9 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import Card from "components/Card/Card.jsx";
 import carouselStyle from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.jsx";
-import image1 from "assets/img/bg.jpg";
-import image2 from "assets/img/bg2.jpg";
-import image3 from "assets/img/bg3.jpg";
+import image1 from "assets/img/img1.png";
+import image2 from "assets/img/Logo20ans.jpg";
+import image3 from "assets/img/img2.png";
 
 class SectionCarousel extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class SectionCarousel extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false
+      autoplay: true
     };
     return (
       <div className={classes.section}>
@@ -50,6 +50,7 @@ class SectionCarousel extends React.Component {
                       src={image2}
                       alt="Second slide"
                       className="slick-image"
+                      
                     />
                     {/*<div className="slick-caption">
                       <h4>

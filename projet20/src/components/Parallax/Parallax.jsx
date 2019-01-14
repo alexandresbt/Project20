@@ -8,8 +8,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 // core components
 import parallaxStyle from "assets/jss/material-kit-react/components/parallaxStyle.jsx";
-import CardMedia from '@material-ui/core/CardMedia';
-
 class Parallax extends React.Component {
   constructor(props) {
     super(props);
