@@ -37,14 +37,14 @@ class Accueil extends React.Component {
           brand="Accueil"
           fixed
           rightLinks={<HeaderLinks />}
-          color="transparent"
+          color="white"
           changeColorOnScroll={{
             height: 300,
             color: "danger"
           }}
           {...rest}
         />
-        <Parallax image={require("assets/img/img1.png")}>
+        <Parallax data-parallax="false" image={require("assets/img/Logo20ans.jpg")}>
           <div className={classes.container}>
 
             <GridContainer>

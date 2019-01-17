@@ -26,7 +26,7 @@ class SectionPills extends React.Component {
         <div className={classes.container}>
           <div id="navigation-pills">
             <div className={classes.title}>
-              <h2>Programme de la journée</h2>
+              <h2>Programme du Vendredi 5 Avril 2019</h2>
             </div>
             <GridContainer>
               

@@ -6,12 +6,8 @@ import Accueil from "views/Accueil/Accueil.jsx";
 import Sondage from "views/Sondage/Sondage.jsx";
 
 var indexRoutes = [
-  { path: "/accueil", name: "Accueil", component: Accueil },
   { path: "/sondage", name: "Sondage", component: Sondage },
-  { path: "/landing-page", name: "LandingPage", component: LandingPage },
-  { path: "/profile-page", name: "ProfilePage", component: ProfilePage },
-  { path: "/login-page", name: "LoginPage", component: LoginPage },
-  { path: "/", name: "Components", component: Components }
+  { path: "/", name: "Accueil", component: Accueil }
 ];
 
 export default indexRoutes;

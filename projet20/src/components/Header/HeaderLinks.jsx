@@ -22,6 +22,7 @@ function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
     <List className={classes.list}>
+    {/*
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
@@ -45,7 +46,7 @@ function HeaderLinks({ ...props }) {
           ]}
         />
       </ListItem>
-      
+        */}
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
@@ -55,7 +56,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/tcinsalyon/"
+            href="https://www.facebook.com/events/1844389542340758/"
             target="_blank"
             className={classes.navLink}
           >
