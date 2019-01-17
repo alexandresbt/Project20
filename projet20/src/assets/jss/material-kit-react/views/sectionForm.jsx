@@ -1,4 +1,6 @@
 import { container } from "assets/jss/material-kit-react.jsx";
+import imagesStyles from "assets/jss/material-kit-react/imagesStyles.jsx";
+import customCheckboxRadioSwitch from "assets/jss/material-kit-react/customCheckboxRadioSwitch.jsx";
 
 const sectionformStyle = {
     container,
@@ -8,8 +10,10 @@ const sectionformStyle = {
       paddingRight: "5px"
     },
     button: {
-      marginLeft: "20px"
-    }
+      marginTop: "20px"
+    },
+    ...imagesStyles,
+    ...customCheckboxRadioSwitch
 };
 
 export default sectionformStyle;

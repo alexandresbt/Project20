@@ -13,10 +13,14 @@ a {
 }
 .tableblock{
   border: 1px solid black;
-  width: 30%;
+  width: 25%;
   padding: 20px;
 }
-
+.tableblock2{
+  border: 1px solid black;
+  width: 5%;
+  padding: 20px;
+}
 .margin {
   margin-top: 40px;
 }

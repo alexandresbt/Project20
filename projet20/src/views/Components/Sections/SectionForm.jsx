@@ -6,11 +6,15 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 import Button from "components/CustomButtons/Button.jsx";
+import Radio from "@material-ui/core/Radio";
+import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const initialState = {
   nom: '',
   prenom: '',
-  email: ''
+  email: '',
+  selectedEnabled: "a"
 };
 
 class SectionForm extends React.Component {
@@ -19,6 +23,7 @@ class SectionForm extends React.Component {
     this.state = initialState;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChangeEnabled = this.handleChangeEnabled.bind(this);
   }
   reset () {
     this.setState(initialState);
@@ -39,13 +44,16 @@ class SectionForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    //console.log(event.target);
+    console.log(this.state);
     
-    const data = new FormData();
+    /*const data = new FormData();
     data.append('nom', this.state.nom);
     data.append('prenom', this.state.prenom);
     data.append('email', this.state.email);
-    /*for (var pair of data.entries()) {
+    data.append('',);
+    data.append('',);
+    data.append('',);
+    for (var pair of data.entries()) {
       console.log(pair[0]+ ', ' + pair[1]); 
     }*/
     
@@ -58,10 +66,15 @@ class SectionForm extends React.Component {
       body: JSON.stringify({
         nom: this.state.nom,
         prenom: this.state.prenom,
-        email: this.state.email
+        email: this.state.email,
+        response: this.state.selectedEnabled
       })
 })
     this.reset();
+  }
+
+  handleChangeEnabled(event) {
+    this.setState({ selectedEnabled: event.target.value });
   }
 
   render() {
@@ -134,11 +147,113 @@ class SectionForm extends React.Component {
               </GridItem>
             </GridContainer>
           </div>
-          <div className={classes.button}>
-            <GridContainer>
-              <Button type="submit" color="danger">Je m'inscris</Button>
-            </GridContainer>
+          <div
+              className={
+                classes.checkboxAndRadio +
+                " " +
+                classes.checkboxAndRadioHorizontal
+              }
+            >
+            <FormControlLabel
+              control={
+                <Radio
+                  checked={this.state.selectedEnabled === "a"}
+                  onChange={this.handleChangeEnabled}
+                  value="a"
+                  name="ok"
+                  aria-label="A"
+                  icon={
+                    <FiberManualRecord
+                      className={classes.radioUnchecked}
+                    />
+                  }
+                  checkedIcon={
+                    <FiberManualRecord className={classes.radioChecked} />
+                  }
+                  classes={{
+                    checked: classes.radio
+                  }}
+                />
+              }
+              classes={{
+                label: classes.label
+              }}
+              label="Je participe"
+            />
           </div>
+          <div
+              className={
+                classes.checkboxAndRadio +
+                " " +
+                classes.checkboxAndRadioHorizontal
+              }
+            >
+            <FormControlLabel
+              control={
+                <Radio
+                  checked={this.state.selectedEnabled === "b"}
+                  onChange={this.handleChangeEnabled}
+                  value="b"
+                  name="maybe"
+                  aria-label="B"
+                  icon={
+                    <FiberManualRecord
+                      className={classes.radioUnchecked}
+                    />
+                  }
+                  checkedIcon={
+                    <FiberManualRecord className={classes.radioChecked} />
+                  }
+                  classes={{
+                    checked: classes.radio
+                  }}
+                />
+              }
+              classes={{
+                label: classes.label
+              }}
+              label="Je pense participer"
+            />
+          </div>
+          <div
+              className={
+                classes.checkboxAndRadio +
+                " " +
+                classes.checkboxAndRadioHorizontal
+              }
+            >
+            <FormControlLabel
+              control={
+                <Radio
+                  checked={this.state.selectedEnabled === "c"}
+                  onChange={this.handleChangeEnabled}
+                  value="c"
+                  name="no"
+                  aria-label="B"
+                  icon={
+                    <FiberManualRecord
+                      className={classes.radioUnchecked}
+                    />
+                  }
+                  checkedIcon={
+                    <FiberManualRecord className={classes.radioChecked} />
+                  }
+                  classes={{
+                    checked: classes.radio
+                  }}
+                />
+              }
+              classes={{
+                label: classes.label
+              }}
+              label="Je ne participe pas"
+            />
+          </div>
+          <GridContainer>
+            <div className={classes.button}>
+              <Button type="submit" color="danger">Envoyer</Button>
+            </div>
+          </GridContainer>
         </form>
       </div>
     );

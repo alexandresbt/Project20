@@ -2,10 +2,16 @@ extend layout
 
 
 block content
-  h1 Nombre d'inscrits : #{number[0].id}
-  .row
-    h1 Emsemble des Inscrits :
-    button(type="button" id="btnxml" class="btn btn-primary espace") Télécharger en format Exel ( .xml)
+  h1 Nombre de participants confirmés : #{number[0].ok}
+  h1 Nombre de participants ne savant pas : #{number[0].maybe}
+  h1 Nombre de participants ne venant pas : #{number[0].no}
+  
+  h1 Emsemble des Inscrits : #{number[0].id}
+  br
+  br
+  button(type="button" id="btnxml" class="btn btn-primary ") Télécharger en format Exel ( .xml)
+  br
+  br
   each participant in participants
     .row 
       .tableblock
@@ -14,7 +20,12 @@ block content
         h7.test #{participant.prenom}
       .tableblock
         h7.test #{participant.email}
-
+      .tableblock2
+        h7.test #{participant.ok}
+      .tableblock2
+        h7.test #{participant.maybe}
+      .tableblock2
+        h7.test #{participant.non}
 
 block scripts
   script(src='/js/xml.js')
