@@ -28,7 +28,7 @@ app.use(function(_req, res, next) {
   next();
 });
 
-app.options('*', function (request, response, next) {
+app.options('/*', function (request, response, next) {
   console.log("COUCOU")
   response.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
   response.send();
