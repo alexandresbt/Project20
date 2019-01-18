@@ -59,7 +59,7 @@ router.post('/addparticipant', async function(req, res, _next) {
 });
 
 /* GET home page. */
-router.get('/db', function(_req, res, _next) {
+router.get('/', function(_req, res, _next) {
   res.render('openconnexion', { title: 'La base de donnée des 20 ans de TC' });
 });
 
