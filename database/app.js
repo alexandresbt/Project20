@@ -27,7 +27,7 @@ app.use(function(_req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+/*
 app.options('http://tc20ans.insa-lyon.fr:6556/*', function (request, response, next) {
   console.log("COUCOU")
   response.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
@@ -40,7 +40,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-
+*/
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
