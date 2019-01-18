@@ -37,7 +37,7 @@ router.post('/login', async function(req, res) {
 
 
 router.post('/addparticipant', async function(req, res, _next) {
-  /*try {
+  try {
     
     if (req.body.nom != "" && req.body.prenom != "" && req.body.email != "") {
       var ok = 0;
@@ -51,16 +51,14 @@ router.post('/addparticipant', async function(req, res, _next) {
         no = 1;
       }
       await ParticipantModel.addParticipant(req.body.nom, req.body.prenom, req.body.email, ok, maybe, no);
-      res.status(200).send();
+      return res.status(200).send();
     }
   } catch (ex) {
     res.render('error', {
       message: "Erreur dans la modification des données",
       error: ex
     })
-  }*/
-  res.status(200).send();
-
+  }
 });
 
 module.exports = router;
