@@ -38,6 +38,8 @@ router.post('/login', async function(req, res) {
 
 router.post('/addparticipant', async function(req, res, _next) {
   try {
+    console.log("salut");
+    
     if (req.body.nom != "" && req.body.prenom != "" && req.body.email != "") {
       var ok = 0;
       var maybe = 0;
