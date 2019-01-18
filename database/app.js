@@ -27,12 +27,12 @@ app.use(function(_req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+/*
 app.options('http://localhost/*', function (request, response, next) {
   response.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
   response.send();
 });
-
+*/
 app.use(session({
   store: new mysqlStore({}, db.pool),
   secret: 'qsfqsdlgjksdfmjxcbxcvvfuhvlzks',
