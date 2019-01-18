@@ -50,10 +50,8 @@ class Accueil extends React.Component {
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>Les 20 ans du département Télécom</h1>
-                  <h3 className={classes.subtitle}>
-                    Avril 2019 - La Rotonde
-                  </h3>
+                  
+                 
                 </div>
               </GridItem>
             </GridContainer>
