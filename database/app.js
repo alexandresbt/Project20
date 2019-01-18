@@ -33,7 +33,7 @@ app.use(session({
 }));
 
 app.use('/', indexRouter);
-
+/*
 // catch 404 and forward to error handler
 app.use(function(_req, _res, next) {
   next(createError(404));
@@ -49,5 +49,6 @@ app.use(function(err, req, res, _next) {
   res.status(err.status || 500);
   res.render('error');
 });
+*/
 
 module.exports = app;

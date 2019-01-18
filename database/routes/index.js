@@ -3,10 +3,7 @@ const router = express.Router();
 
 const ParticipantModel = require('../models/participants');
 
-/* GET home page. */
-router.get('/', function(_req, res, _next) {
-  res.render('openconnexion', { title: 'La base de donnée des 20 ans de TC' });
-});
+
 
 router.post('/login', async function(req, res) {
   let errorMessage = '';
@@ -59,6 +56,11 @@ router.post('/addparticipant', async function(req, res, _next) {
       error: ex
     })
   }
+});
+
+/* GET home page. */
+router.get('/', function(_req, res, _next) {
+  res.render('openconnexion', { title: 'La base de donnée des 20 ans de TC' });
 });
 
 module.exports = router;
