@@ -57,7 +57,7 @@ class SectionForm extends React.Component {
       console.log(pair[0]+ ', ' + pair[1]); 
     }*/
     
-    fetch('http://tc20ans.insa-lyon.fr:6556/addparticipant', {
+    fetch('/addparticipant', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
