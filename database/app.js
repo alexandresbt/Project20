@@ -22,8 +22,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(cors());
 
+app.options('http://tc20ans.insa-lyon.fr:6556/*', function (request, response, next) {
+  console.log("COUCOU")
+  response.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+  response.send();
+});
 
 app.use(session({
   store: new mysqlStore({}, db.pool),
