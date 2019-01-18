@@ -28,7 +28,7 @@ app.use(function(_req, res, next) {
   next();
 });
 
-app.options('http://localhost:80/*', function (request, response, next) {
+app.options('http://localhost/*', function (request, response, next) {
   response.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
   response.send();
 });
