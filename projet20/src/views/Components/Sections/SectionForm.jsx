@@ -44,7 +44,7 @@ class SectionForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
+    //console.log(this.state);
     
     /*const data = new FormData();
     data.append('nom', this.state.nom);

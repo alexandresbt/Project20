@@ -4,7 +4,6 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
 import Cafe from "@material-ui/icons/LocalCafe";
 import Diner from "@material-ui/icons/LocalDining";
 import Cocktail from "@material-ui/icons/LocalBar";
@@ -16,7 +15,6 @@ import GridItem from "components/Grid/GridItem.jsx";
 import NavPills from "components/NavPills/NavPills.jsx";
 
 import pillsStyle from "assets/jss/material-kit-react/views/accueilSections/pillsStyle.jsx";
-import image1 from "assets/img/bg.jpg";
 
 class SectionPills extends React.Component {
   render() {
