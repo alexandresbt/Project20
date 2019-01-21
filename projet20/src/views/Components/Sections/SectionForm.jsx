@@ -9,6 +9,9 @@ import Button from "components/CustomButtons/Button.jsx";
 import Radio from "@material-ui/core/Radio";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import SnackbarContent from "components/Snackbar/SnackbarContent.jsx";
+import Check from "@material-ui/icons/Check";
+
 
 const initialState = {
   nom: '',
@@ -24,6 +27,9 @@ class SectionForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChangeEnabled = this.handleChangeEnabled.bind(this);
+    this.state = {
+      inputLinkClicked: false
+    }
   }
   reset () {
     this.setState(initialState);
@@ -44,6 +50,7 @@ class SectionForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.handleAddSecondInput();
     //console.log(this.state);
     
     /*const data = new FormData();
@@ -77,6 +84,14 @@ class SectionForm extends React.Component {
     this.setState({ selectedEnabled: event.target.value });
   }
 
+  handleAddSecondInput = () => {
+    this.setState({
+      inputLinkClicked: true
+    })
+    
+  }
+
+
   render() {
     const {classes} = this.props;
 
@@ -105,6 +120,7 @@ class SectionForm extends React.Component {
                     type: "text"
                   }}
                 />
+                
               </GridItem>
             </GridContainer>
           </div>
@@ -252,6 +268,23 @@ class SectionForm extends React.Component {
           <GridContainer>
             <div className={classes.button}>
               <Button type="submit" color="danger">Envoyer</Button>
+              <div id="children-pane">
+              {
+              this.state.inputLinkClicked?
+              <SnackbarContent
+                message={
+                  <span>
+                    <b>Validée :</b> Votre réponse a été enregistrée.
+                  </span>
+                }
+                close
+                color="success"
+                icon={Check}
+              />
+              :
+              <div></div>
+              }
+              </div>
             </div>
           </GridContainer>
         </form>
